@@ -44,6 +44,25 @@
       color: #38bdf8;
     }
 
+    .dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+    }
+
+    .dashboard img {
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+      padding: 5px;
+    }
+
+    .project {
+      max-width: 1200px;
+      margin: auto;
+    }
+
   </style>
 </head>
 
@@ -74,9 +93,11 @@
 
     <h4>Dashboard:</h4>
 
+  <div class="dashboard">
     <img src="portfolio/images/IngresosCategorias.jpg">
     <img src="portfolio/images/TopProductos.jpg">
     <img src="portfolio/images/IngresosPorFecha.jpg">
+  </div>
 
   </div>
 
