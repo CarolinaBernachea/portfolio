@@ -1,23 +1,25 @@
 /*
 
-PROYECTO 1 
+=====================================
+PROJECT 1
 Retail Sales Analysis
+=====================================
 
-Simulamos un negocio chico tipo super de barrio
+This project simulates a small retail business, similar to a neighborhood supermarket.
 
-Vamos a mostrar:
-- Ventas
-- Productos
-- Stock
-- Comportamiento de clientes
+It provides insights into:
+- Sales performance
+- Product analysis
+- Inventory behavior
+- Customer purchasing patterns
 
-**OBJETIVO DEL PROYECTO**
+**PROJECT OBJECTIVE**
 
-Poder responder a:
-¿Qué productos se venden más?
-¿Qué días se vende más?
-¿Qué categoría deja más plata?
-¿Hay productos con bajo movimiento?
+To answer key business questions such as:
+- Which products generate the highest sales?
+- On which days do sales peak?
+- Which categories produce the highest revenue?
+- Are there products with low sales or low turnover?
 
 */ 
 
@@ -141,7 +143,7 @@ JOIN products p ON si.product_id = p.product_id
 GROUP BY p.name
 ORDER BY total_vendido DESC;
 
--- Ventas por categoría
+-- Ventas por categorÃ­a
 SELECT
 	c.name,
 	SUM(si.quantity * si.price) AS total_ingresos
@@ -151,7 +153,7 @@ JOIN categories c ON p.category_id = c.category_id
 GROUP BY c.name
 ORDER BY total_ingresos DESC;
 
--- Ventas por día
+-- Ventas por dÃ­a
 SELECT 
 	CAST(sale_date AS DATE) AS fecha,
 	SUM(total_amount) AS total_ventas
