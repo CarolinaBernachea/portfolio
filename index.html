@@ -55,7 +55,9 @@
       width: 100%;
       border-radius: 10px;
       background: white;
-      padding: 5px;
+      padding: 10px;
+      max-height: 400px;
+      object-fit: contain;
     }
 
     .project {
@@ -91,6 +93,20 @@
       margin-top: 20px;
     }
 
+    .chart-container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .chart-container img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: white;
+      padding: 10px;
+    }
+
   </style>
 </head>
 
@@ -116,7 +132,9 @@
     <button onclick="toggleProject()" id="btn">Ver detalles</button>
     
     <div id="details" class="details">
-      
+
+      <h3>Internal Business Dashboard</h3>
+
       <h4>Key Insights:</h4>
       <ul>
         <li>Beverages generate the highest revenue</li>
@@ -129,7 +147,7 @@
       <button onclick="showChart('prod')">Productos</button>
       <button onclick="showChart('time')">Tendencia</button>
 
-      <div style="margin-top:20px;">
+      <div class="chart-container">
         <img id="chart" src="portfolio/images/IngresosCategorias.jpg">
       </div>
 
@@ -148,7 +166,7 @@ function toggleProject() {
   if (section.classList.contains("open")) {
     btn.innerText = "Ocultar";
   } else {
-    btn.innerText = "ver deralles";
+    btn.innerText = "Ver detalles";
   }
     
 }
