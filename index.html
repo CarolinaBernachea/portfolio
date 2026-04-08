@@ -45,10 +45,10 @@
     }
 
     .dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .dashboard img {
@@ -63,6 +63,21 @@
       margin: auto;
     }
 
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
   </style>
 </head>
 
@@ -74,34 +89,46 @@
 </header>
 
 <section>
+  
   <h2>Projects</h2>
-
+  
   <div class="project">
     <h3>Mercado Pueyrredón — Retail Analysis</h3>
-
+    
     <p>
       Simulated retail business project analyzing sales, products and categories.
       Built using SQL Server and Power BI.
     </p>
+    
+    <button onclick="toggleProject()">Ver detalles</button>
+    
+    <div id="details" style="display:none; margin-top:20px;">
+      
+      <h4>Key Insights:</h4>
+      <ul>
+        <li>Beverages generate the highest revenue</li>
+        <li>Sales are concentrated in a few key products</li>
+        <li>Sales show variation across different periods</li>
+      </ul>
+      
+      <h4>Dashboard:</h4>
+      <div class="dashboard">
+        <img src="portfolio/images/IngresosCategorias.jpg">
+        <img src="portfolio/images/TopProductos.jpg">
+        <img src="portfolio/images/IngresosPorFecha.jpg">
+      </div>
 
-    <h4>Key Insights:</h4>
-    <ul>
-      <li>Beverages generate the highest revenue</li>
-      <li>Sales are concentrated in a few key products</li>
-      <li>Sales show variation across different periods</li>
-    </ul>
-
-    <h4>Dashboard:</h4>
-
-  <div class="dashboard">
-    <img src="portfolio/images/IngresosCategorias.jpg">
-    <img src="portfolio/images/TopProductos.jpg">
-    <img src="portfolio/images/IngresosPorFecha.jpg">
-  </div>
-
+    </div>
   </div>
 
 </section>
 
+ <script>
+function toggleProject() {
+  const section = document.getElementById("details");
+  section.style.display = section.style.display === "none" ? "block" : "none";
+}
+</script> 
+  
 </body>
 </html>
