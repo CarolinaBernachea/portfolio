@@ -196,7 +196,52 @@
 
     </div>
   </div>
+  
+  <div class="project">
+    <h3>Delivery Analytics — Geo & Sales Insights</h3>
+    
+    <p>
+      Simulated delivery system analyzing orders, revenue and geographic distribution.
+      Built using SQL Server and Power BI.
+    </p>
+    
+    <button onclick="toggleProject2()" id="btn2">View details</button>
+    
+    <div id="details2" class="details">
+      
+      <h3>Delivery Performance Dashboard</h3>
+      
+      <h4>Key Insights:</h4>
+      <ul>
+        <li>Revenue distribution varies significantly by city</li>
+        <li>Montevideo shows the highest order density</li>
+        <li>Some regions generate higher revenue with fewer orders</li>
+        <li>Geolocation enables better delivery optimization</li>
+      </ul>
+      
+      <h4>Static Map Preview:</h4>
+      <div class="chart-container">
+        <img src="portfolio/project2_delivery/images/mapa.jpg">
+      </div>
 
+      <h4>Interactive Dashboard</h4>
+
+      <iframe 
+        title="delivery_reports"
+        src="https://app.powerbi.com/view?r=eyJrIjoiMzU4MTM0ZTAtYjFhZC00NjE4LTkxYmQtOWJlMGE5OWFiY2M4IiwidCI6ImViYTNkYmU5LWJlNDQtNGViNi04YmEwLWY1ZjFmYjFlNTViYSIsImMiOjR9"
+        frameborder="0" 
+        allowFullScreen="true">
+      </iframe>
+
+      <h4>💻 Technical Assets:</h4>
+
+      <div class="links">
+        <a href="portfolio/project2_delivery/sql/delivery_db.sql" target="_blank">📄 View SQL Script</a>
+        <a href="portfolio/project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Download Power BI</a>
+      </div>
+    </div>
+  </div>
+  
 </section>
 
 <script>
@@ -227,6 +272,21 @@ function showChart(type) {
   }
   if (type === "time") {
     img.src = "portfolio/project1_retail/images/IngresosPorFecha.jpg";
+  }
+}
+</script>
+
+<script>
+function toggleProject2() {
+  const section = document.getElementById("details2");
+  const btn = document.getElementById("btn2");
+  
+  section.classList.toggle("open");
+
+  if (section.classList.contains("open")) {
+    btn.innerText = "Hide details";
+  } else {
+    btn.innerText = "View details";
   }
 }
 </script>
