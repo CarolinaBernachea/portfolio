@@ -78,6 +78,19 @@
       background: #0ea5e9;
     }
 
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+
+    .details.open {
+      max-height: 1000px;
+      opacity: 1;
+      margin-top: 20px;
+    }
+
   </style>
 </head>
 
@@ -100,9 +113,9 @@
       Built using SQL Server and Power BI.
     </p>
     
-    <button onclick="toggleProject()">Ver detalles</button>
+    <button onclick="toggleProject()" id="btn">Ver detalles</button>
     
-    <div id="details" style="display:none; margin-top:20px;">
+    <div id="details" class="details">
       
       <h4>Key Insights:</h4>
       <ul>
@@ -123,10 +136,19 @@
 
 </section>
 
- <script>
+<script>
 function toggleProject() {
   const section = document.getElementById("details");
-  section.style.display = section.style.display === "none" ? "block" : "none";
+  const btn = document.getElementById("btn");
+  
+  section.classList.toggle("open");
+
+  if (section.classList.contains("open")) {
+    btn.innerText = "Ocultar";
+  } else {
+    btn.innerText = "ver deralles";
+  }
+    
 }
 </script> 
   
