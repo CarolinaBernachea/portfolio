@@ -125,10 +125,12 @@
       </ul>
       
       <h4>Dashboard:</h4>
-      <div class="dashboard">
-        <img src="portfolio/images/IngresosCategorias.jpg">
-        <img src="portfolio/images/TopProductos.jpg">
-        <img src="portfolio/images/IngresosPorFecha.jpg">
+      <button onclick="showChart('cat')">Categorías</button>
+      <button onclick="showChart('prod')">Productos</button>
+      <button onclick="showChart('time')">Tendencia</button>
+
+      <div style="margin-top:20px;">
+        <img id="chart" src="portfolio/images/IngresosCategorias.jpg">
       </div>
 
     </div>
@@ -150,7 +152,23 @@ function toggleProject() {
   }
     
 }
-</script> 
+</script>
+
+<script>
+function showChart(type) {
+  const img = document.getElementById("chart");
+
+  if (type === "cat") {
+    img.src = "portfolio/images/IngresosCategorias.jpg";
+  }
+  if (type === "prod") {
+    img.src = "portfolio/images/TopProductos.jpg";
+  }
+  if (type === "time") {
+    img.src = "portfolio/images/IngresosPorFecha.jpg";
+  }
+}
+</script>
   
 </body>
 </html>
