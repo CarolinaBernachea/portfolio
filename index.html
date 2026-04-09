@@ -2,14 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Carolina Bernachea | Data Analyst</title>
+  <title>Carolina Bernachea Portfolio | System Analyst</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #020617;
+      background: linear-gradient(-45deg, #020617, #020617, #0f172a, #020617);
       color: #e2e8f0;
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
     }
 
     header {
@@ -43,7 +45,7 @@
     }
 
     .project:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px) scale(1.01);
     }
 
     img {
@@ -171,12 +173,33 @@
       line-height: 1.4;
     }
 
+    .portfolio-title {
+      color: #22c55e;
+      letter-spacing: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    @keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    
   </style>
 </head>
 
 <body>
 
 <header>
+  <h2 class="portfolio-title">PORTFOLIO</h2>
   <h1>Carolina Bernachea</h1>
   <p>Data Analyst | SQL Server | Reporting | Data Analysis</p>
 </header>
