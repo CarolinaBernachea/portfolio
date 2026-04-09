@@ -141,6 +141,36 @@
       height: 700px;
     }
 
+    .project-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .summary-card {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-3px);
+      border-color: #22c55e;
+    }
+
+    .summary-card h4 {
+      margin-bottom: 8px;
+      color: #22c55e;
+    }
+
+    .summary-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
   </style>
 </head>
 
@@ -164,13 +194,25 @@
   
   <div class="project">
     <h3>Retail Sales Analysis — Mercado Pueyrredón</h3>
+
+    <div class="project-summary">      
+      <div class="summary-card">
+        <h4>📌 Problem</h4>
+        <p>The company lacks visibility on which products drive revenue.</p>
+      </div>
+
+      <div class="summary-card">
+          <h4>⚙️ Approach</h4>
+          <p>Designed a SQL data model and Power BI dashboard to analyze sales by category, product and time.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>📊 Key Insight</h4>
+        <p>Beverages generate the highest revenue and sales are concentrated in a small set of products.</p>
+      </div>
+    </div>
     
-    <p>
-      Simulated retail business project analyzing sales, products and categories.
-      Built using SQL Server and Power BI.
-    </p>
-    
-    <button onclick="toggleProject()" id="btn">View Details</button>
+    <button onclick="toggleProject('details','btn')" id="btn">View Details</button>
     
     <div id="details" class="details">
 
@@ -214,12 +256,26 @@
   <div class="project">
     <h3>Delivery Analytics — Geo & Sales Insights</h3>
     
-    <p>
-      Simulated delivery system analyzing orders, revenue and geographic distribution.
-      Built using SQL Server and Power BI.
-    </p>
+    <div class="project-summary">
+
+      <div class="summary-card">
+        <h4>📌 Problem</h4>
+        <p>The business lacks visibility on geographic performance and revenue distribution.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>⚙️ Approach</h4>
+        <p>Built a SQL-based data model and Power BI dashboard to analyze orders, revenue and geolocation patterns.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>📊 Key Insight</h4>
+        <p>Montevideo shows the highest order density, while some regions generate higher revenue with fewer orders.</p>
+      </div>
+
+    </div>
     
-    <button onclick="toggleProject2()" id="btn2">View details</button>
+    <button onclick="toggleProject('details2','btn2')" id="btn2">View Details</button>
     
     <div id="details2" class="details">
       
@@ -259,18 +315,15 @@
 </section>
 
 <script>
-function toggleProject() {
-  const section = document.getElementById("details");
-  const btn = document.getElementById("btn");
-  
+function toggleProject(id, btnId) {
+  const section = document.getElementById(id);
+  const btn = document.getElementById(btnId);
+
   section.classList.toggle("open");
 
-  if (section.classList.contains("open")) {
-    btn.innerText = "Hide details";
-  } else {
-    btn.innerText = "Ver detalles";
-  }
-    
+  btn.innerText = section.classList.contains("open")
+    ? "Hide Details"
+    : "View Details";
 }
 </script>
 
@@ -298,9 +351,9 @@ function toggleProject2() {
   section.classList.toggle("open");
 
   if (section.classList.contains("open")) {
-    btn.innerText = "Hide details";
+    btn.innerText = "Hide Details";
   } else {
-    btn.innerText = "View details";
+    btn.innerText = "View Details";
   }
 }
 </script>
