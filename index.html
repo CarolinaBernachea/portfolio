@@ -381,6 +381,18 @@
     <li>Geographic distribution reveals growth opportunities</li>
   </ul>
 
+  <div class="buttons">
+    <button onclick="showChart3('img3','year')">Year</button>
+    <button onclick="showChart3('img3','city')">City</button>
+    <button onclick="showChart3('img3','map')">Map</button>
+    <button onclick="showChart3('img3','customers')">Customers</button>
+  </div>
+
+  <div class="chart-container">
+    <img id="chart3" src="portfolio/project3_analytics/images/IngresosPorAño.jpg">
+  </div>
+
+  
   <h4>Static Dashboard Preview:</h4>
   <div class="dashboard">
     <img src="portfolio/project3_analytics/images/IngresosPorAño.jpg">
@@ -437,7 +449,26 @@ function showChart(type) {
   }
 }
 </script>
+  
+<script>
+function showChart3(type) {
+  const chart = document.getElementById("chart3");
 
+  if (type === "year") {
+    chart.src = "portfolio/project3_analytics/images/IngresosPorAño.jpg";
+  } 
+  else if (type === "city") {
+    chart.src = "portfolio/project3_analytics/images/IngresosporCiudad.jpg";
+  } 
+  else if (type === "map") {
+    chart.src = "portfolio/project3_analytics/images/mapa.jpg";
+  } 
+  else if (type === "customers") {
+    chart.src = "portfolio/project3_analytics/images/OrdenesporCliente.jpg";
+  }
+}
+</script>
+  
 <script>
 function toggleProject2() {
   const section = document.getElementById("details2");
