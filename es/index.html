@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carolina Bernachea Portfolio | Analista de Sistemas</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #020617, #0a0f1f, #0f172a, #020617);
+      color: #e2e8f0;
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+    }
+
+    header {
+      padding: 40px 20px 20px 20px;
+      text-align: center;
+      background: transparent;
+      position: relative;
+    }
+    
+    header::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(34,197,94,0.15), transparent);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(60px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    .project {
+      background: #0f172a;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 50px;
+
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    h2 {
+      color: #22c55e;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .dashboard img {
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+      padding: 10px;
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    button {
+      background: #22c55e;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+
+    .details.open {
+      max-height: none;
+      opacity: 1;
+      margin-top: 20px;
+    }
+
+    .chart-container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .chart-container img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: white;
+      padding: 10px;
+    }
+
+    .links {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      background: #38bdf8;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      background: #16a34a;
+    }
+
+    iframe {
+      border-radius: 12px;
+      margin-top: 20px;
+      width: 100%;
+      height: 700px;
+    }
+
+    .project-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .summary-card {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-3px);
+      border-color: #22c55e;
+    }
+
+    .summary-card h4 {
+      margin-bottom: 8px;
+      color: #22c55e;
+    }
+
+    .summary-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .portfolio-title {
+      color: #22c55e;
+      letter-spacing: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div style="position:absolute; top:20px; right:20px;">
+    <a href="/index.html" style="margin-right:10px;">EN</a>
+    <a href="/es/index.html" style="margin-right:10px;">ES</a>
+    <a href="/pt/index.html">PT</a>
+  </div>
+  
+  <h2 class="portfolio-title">PORTFOLIO</h2>
+  <h1>Carolina Bernachea</h1>
+  <p>Transformando datos en decisiones de negocio</p>
+  <p>Analista SQL Server | Soporte de Aplicaciones | Análisis de Datos</p>
+
+  <div style="margin-top:60px; margin-bottom:20px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+
+  <a href="portfolio/carolina_bernachea_cv.pdf" target="_blank"
+     style="background:#facc15; padding:12px 20px; border-radius:8px; text-decoration:none; color:black; font-weight:bold; font-size:14px;">
+     📄 Ver CV
+  </a>
+
+  <a href="https://www.linkedin.com/in/bernacheacarolina/" target="_blank"
+     style="background:#38bdf8; padding:12px 20px; border-radius:8px; text-decoration:none; color:black; font-weight:bold; font-size:14px;">
+     💼 LinkedIn
+  </a>
+
+</div>
+
+  
+</header>
+  
+<section style="text-align:center; max-width:800px; margin:10px auto 0 auto; padding:10px;">
+  <p>
+    Analista de Soporte de Aplicaciones y SQL Server con experiencia trabajando en sistemas críticos de negocio y análisis de datos.
+  </p>
+
+  <p style="opacity:0.8; margin-top:10px;">
+    Profesional argentina con experiencia en LATAM y entornos internacionales, abierta a oportunidades remotas o híbridas según ubicación.
+  </p>
+</section>
+
+<section>
+  <h2>EXPERIENCIA REAL</h2>
+
+  <div class="project">
+    <h3>Análisis de Incidentes — Oracle & Jira</h3>
+
+    <div class="project-summary">
+
+      <div class="summary-card">
+        <h4>📌 Problema</h4>
+        <p>
+          Alto volumen de transacciones fallidas sin una causa raíz clara,
+          afectando las operaciones del negocio y los tiempos de respuesta.
+        </p>
+      </div>
+
+      <div class="summary-card">
+        <h4>⚙️ Solución</h4>
+        <p>
+          Analicé logs de base de datos, y el comportamiento del sistema.
+          Analicé origenes y destinos de los datos contra WMS -- POS identificando patrones
+          en las fallas y documentando procedimientos de troubleshooting.
+        </p>
+      </div>
+
+      <div class="summary-card">
+        <h4>📊 Impacto</h4>
+        <p>
+          Reducción en los tiempos de resolución de incidentes, mejora en procesos diarios ya que
+          no se detenia a mitad del flujo por fallas de integración.
+          Generación de ahorros en tiempo y costos asociados a proveedores.
+        </p>
+      </div>
+
+    </div>
+      <h4>🧠 Qué hice:</h4>
+      <ul>
+        <li>Inventigación de transacciones fallidas mediante logs de hospital de integraciones de Oracle y consultas en Oracle SQL</li>
+        <li>Identificación de patrones recurrentes de error (campos faltantes desde origen en WMS, errores en formatos de json, etc)</li>
+        <li>Análisis del comportamiento de la base de datos para identificar causas raíz</li>
+        <li>Documentación de procedimientos de troubleshooting para equipos de soporte</li>
+        <li>Colaboración con equipos tecnicos y proveedores de Oracle para la resolución de incidentes</li>
+      </ul>
+    
+    </div>
+    <div class="project">
+    <h3>Validación de Datos & Troubleshooting SQL — Sistemas Retail</h3>
+  
+    <div class="project-summary">
+      <div class="summary-card">
+        <h4>📌 Problema</h4>
+        <p>
+          Inconsistencias en los datos y discrepancias entre los resultados del sistema y los valores esperados,
+          afectando la precisión de los reportes.
+        </p>
+      </div>
+  
+      <div class="summary-card">
+        <h4>⚙️ Solución</h4>
+        <p>
+          Realicé análisis mediante consultas SQL Oracle y Power BI, para validar datos, identificar inconsistencias
+          y rastrear los problemas hasta su origen dentro del sistema.
+        </p>
+      </div>
+  
+      <div class="summary-card">
+        <h4>📊 Impacto</h4>
+        <p>
+          Detección y corrección de inconsistencias entre reportes de Power BI y datos operativos reales,
+          mejorando la confiabilidad de la información y evitando decisiones basadas en datos incorrectos.
+          Optimización del flujo de trabajo al escalar y coordinar la corrección con los equipos responsables.
+        </p>
+      </div> 
+    </div>
+
+    <h4>🧠 Qué hice:</h4>
+    <ul>
+      <li>Validación de datos en múltiples tablas mediante consultas SQL</li>
+      <li>Identificación de inconsistencias y causas raíz de resultados incorrectos</li>
+      <li>Colaboración con equipos internos para definir y validar la lógica de negocio esperada</li>
+      <li>Soporte a la calidad de datos para procesos operativos y de reporting</li>
+      <li>Comparación de datos entre reportes de Power BI y fuentes operativas para detectar inconsistencias</li>
+      <li>Escalamiento de discrepancias a los equipos responsables para su corrección en origen</li>
+    </ul>  
+  </div>
+
+  <div class="project">
+  <h3>Monitoreo Operativo & Reporting — Jira Dashboards</h3>
+
+  <div class="project-summary">
+    <div class="summary-card">
+      <h4>📌 Problema</h4>
+      <p>
+        Falta de visibilidad sobre el volumen de incidentes, su estado y los tiempos de resolución
+        entre los distintos equipos de soporte.
+      </p>
+    </div>
+
+    <div class="summary-card">
+      <h4>⚙️ Solución</h4>
+      <p>
+        Desarrollo de dashboards y reportes para el seguimiento de incidentes,
+        monitoreo de su evolución y generación de visibilidad sobre el desempeño operativo.
+      </p>
+    </div>
+
+    <div class="summary-card">
+      <h4>📊 Impacto</h4>
+      <p>
+        Mejora en el seguimiento de incidentes y en la priorización de tareas,
+        facilitando una gestión más eficiente de los tiempos de respuesta.
+    </div>
+  </div>
+
+  <h4>🧠 Qué hice:</h4>
+  <ul>
+    <li>Seguimiento del ciclo de vida de incidentes y evolución de estados</li>
+    <li>Desarrollo de dashboards para monitorear el desempeño del soporte</li>
+    <li>Análisis de tendencias en volumen de incidentes y tiempos de resolución</li>
+    <li>Mejora en la visibilidad para stakeholders y equipos de soporte</li>
+  </ul>
+</div>
+  
+</section>
+  
+<section>
+  <h2>PROYECTOS</h2>
+  
+  <div class="project">
+    <h3>Análisis de Ventas Retail — Mercado Pueyrredón</h3>
+
+    <div class="project-summary">      
+      <div class="summary-card">
+        <h4>📌 Problema</h4>
+        <p>La empresa no cuenta con visibilidad sobre qué productos generan mayor ingreso.</p>
+      </div>
+
+      <div class="summary-card">
+          <h4>⚙️ Enfoque</h4>
+          <p>Diseño de un modelo de datos en SQL y un dashboard en Power BI para analizar ventas por categoría, producto y período.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>📊 Hallazgos</h4>
+        <p>Las bebidas generan el mayor ingreso y las ventas se concentran en un grupo reducido de productos.</p>
+      </div>
+    </div>
+    
+    <button onclick="toggleProject('details','btn')" id="btn">Ver Detalles</button>
+    
+    <div id="details" class="details">
+
+      <h3>Dashboard de Negocio Interno</h3>
+
+      <h4>Hallazgos:</h4>
+      <ul>
+        <li>Las bebidas generan el mayor ingreso</li>
+        <li>Las ventas se concentran en pocos productos clave</li>
+        <li>Las ventas presentan variaciones según el período</li>
+      </ul>
+
+      <h4>💡 Impacto de Negocio:</h4>
+      <ul>
+        <li>Permite identificar categorías que impulsan el ingreso para mejorar decisiones de inventario</li>
+        <li>Destaca la concentración de ventas en un subconjunto de productos (efecto Pareto)</li>
+        <li>Brinda visibilidad sobre tendencias de ventas para planificación de demanda</li>
+        <li>Reduce la dependencia de decisiones basadas en intuición mediante datos</li>
+      </ul>
+      
+      <h4>Vista Estática del Dashboard:</h4>
+      <button onclick="showChart('cat')">Categorías</button>
+      <button onclick="showChart('prod')">Productos</button>
+      <button onclick="showChart('time')">Tendencias</button>
+
+      <div class="chart-container">
+        <img id="chart" src="/portfolio/project1_retail/images/IngresosCategorias.jpg">
+      </div>
+
+      <h4>Dashboard Interactivo</h4>
+
+      <iframe 
+        title="retail_reports"
+        src="https://app.powerbi.com/view?r=eyJrIjoiZDkzMDM4NmQtNjU4Mi00YWQ3LTgwMGYtMjdjY2MwYmM3Njk4IiwidCI6ImViYTNkYmU5LWJlNDQtNGViNi04YmEwLWY1ZjFmYjFlNTViYSIsImMiOjR9"
+        frameborder="0" 
+        allowFullScreen="true">
+      </iframe>
+
+
+      <h4>🧠 Decisiones Técnicas:</h4>
+      <ul>
+        <li>Modelo de datos normalizado simulando una estructura real de retail</li>
+        <li>Uso de joins entre ventas y productos para análisis multi-nivel</li>
+        <li>Cálculo de ingresos a nivel transaccional</li>
+      </ul>
+
+      <h4>💻 Recursos Técnicos:</h4>
+
+      <div class="links">
+        <a href="/portfolio/project1_retail/sql/retail_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="/portfolio/project1_retail/powerbi/retaildb_reports.pbix" download>📊 Descargar Power BI</a>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="project">
+    <h3>Análisis de Delivery — Geolocalización & Ventas</h3>
+    
+    <div class="project-summary">
+
+      <div class="summary-card">
+        <h4>📌 Problema</h4>
+        <p>El negocio no cuenta con visibilidad sobre el desempeño geográfico y la distribución de ingresos.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>⚙️ Enfoque</h4>
+        <p>Desarrollo de un modelo de datos en SQL y un dashboard en Power BI para analizar pedidos,
+        ingresos y patrones de geolocalización.</p>
+      </div>
+
+      <div class="summary-card">
+        <h4>📊 Principales Insights</h4>
+        <p>Montevideo presenta la mayor densidad de pedidos, mientras que algunas regiones generan
+        mayores ingresos con menor volumen de órdenes.</p>
+      </div>
+
+    </div>
+    
+    <button onclick="toggleProject('details2','btn2')" id="btn2">Ver Detalles</button>
+    
+    <div id="details2" class="details">
+      
+      <h3>Dashboard de Performance de Delivery</h3>
+      
+      <h4>Principales Insights:</h4>
+      <ul>
+        <li>La distribución de ingresos varía significativamente por ciudad</li>
+        <li>Montevideo presenta la mayor densidad de pedidos</li>
+        <li>Algunas regiones generan mayores ingresos con menos órdenes</li>
+        <li>La geolocalización permite optimizar la distribución de entregas</li>
+      </ul>
+
+      <h4>💡 Impacto de Negocio:</h4>
+      <ul>
+        <li>Identificación de zonas geográficas de alta demanda para optimizar la cobertura de delivery</li>
+        <li>Detección de regiones con alto ingreso pero baja frecuencia de pedidos (oportunidades de crecimiento)</li>
+        <li>Soporte a decisiones estratégicas de expansión y optimización logística</li>
+        <li>Mejora en la visibilidad del desempeño geográfico y la distribución de la demanda</li>
+      </ul>
+      
+      <h4>Vista Estática del Dashboard:</h4>
+      <div class="chart-container">
+        <img src="/portfolio/project2_delivery/images/mapa.jpg">
+      </div>
+
+      <h4>Dashboard Interactivo</h4>
+      <iframe 
+        title="delivery_reports"
+        src="https://app.powerbi.com/view?r=eyJrIjoiMzU4MTM0ZTAtYjFhZC00NjE4LTkxYmQtOWJlMGE5OWFiY2M4IiwidCI6ImViYTNkYmU5LWJlNDQtNGViNi04YmEwLWY1ZjFmYjFlNTViYSIsImMiOjR9"
+        frameborder="0" 
+        allowFullScreen="true">
+      </iframe>
+
+      <h4>🧠 Decisiones Técnicas:</h4>
+      <ul>
+        <li>Modelo de datos normalizado simulando una estructura real de retail</li>
+        <li>Uso de joins entre tablas de ventas y productos para análisis multi-nivel</li>
+        <li>Cálculo de ingresos con granularidad a nivel transaccional</li>
+      </ul>
+      
+      <h4>💻 Recursos Técnicos:</h4>
+      <div class="links">
+        <a href="/portfolio/project2_delivery/sql/delivery_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="/portfolio/project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Descargar Power BI</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Análisis de Clientes — Segmentación & Ingresos</h3>
+    <div class="project-summary">
+
+    <div class="summary-card">
+      <h4>📌 Problema</h4>
+      <p>El negocio no cuenta con visibilidad sobre el valor de los clientes ni su segmentación.</p>
+    </div>
+
+    <div class="summary-card">
+      <h4>⚙️ Enfoque</h4>
+      <p>Diseño de un modelo de datos en SQL y un dashboard en Power BI para analizar comportamiento de clientes,
+        ingresos y segmentación.</p>
+    </div>
+
+    <div class="summary-card">
+      <h4>📊 Principales Insights</h4>
+      <p>Un grupo reducido de clientes concentra la mayor parte de los ingresos,
+        mientras que muchos clientes se encuentran en segmentos de bajo valor o en riesgo.</p>
+    </div>
+  </div>
+
+<button onclick="toggleProject('details3','btn3')" id="btn3">Ver Detalles</button>
+
+<div id="details3" class="details">
+  <h3>Dashboard de Análisis de Clientes</h3>
+  
+  <h4>Principales Insights:</h4>
+  <ul>
+    <li>Los ingresos se concentran en un grupo reducido de clientes VIP</li>
+    <li>Existen clientes con bajo nivel de interacción y bajo gasto</li>
+    <li>La segmentación permite definir estrategias específicas por tipo de cliente</li>
+    <li>La distribución geográfica revela oportunidades de crecimiento</li>
+  </ul>
+
+  <h4>💡 Impacto de Negocio:</h4>
+  <ul>
+    <li>Identificación de clientes de alto valor (VIP) que generan la mayor parte de los ingresos</li>
+    <li>Detección de clientes con baja interacción o en riesgo para estrategias de retención</li>
+    <li>Permite segmentar clientes para aplicar estrategias de marketing específicas según su comportamiento</li>
+    <li>Base para análisis de ciclo de vida del cliente y estrategias de fidelización</li>
+  </ul>
+  
+  <h4>Vista Estática del Dashboard:</h4>
+  <div class="buttons">
+    <button onclick="showChart3('year')">Año</button>
+    <button onclick="showChart3('city')">Ciudad</button>
+    <button onclick="showChart3('map')">Mapa</button>
+    <button onclick="showChart3('customers')">Clientes</button>
+  </div>
+
+  <div class="chart-container">
+    <img id="chart3" src="/portfolio/project3_analytics/images/IngresosporAnio.jpg">
+  </div>  
+
+  <h4>Dashboard Interactivo</h4>
+  <iframe 
+      title="analyticsdb_reports" 
+      src="https://app.powerbi.com/view?r=eyJrIjoiYmNlN2Y4ODYtOWNlNC00MWEyLTk5NDgtYjNlYWM3ZWI4NTQzIiwidCI6ImViYTNkYmU5LWJlNDQtNGViNi04YmEwLWY1ZjFmYjFlNTViYSIsImMiOjR9"
+      frameborder="0" 
+      allowFullScreen="true">
+  </iframe>
+
+  <h4>🧠 Decisiones Técnicas:</h4>
+  <ul>
+    <li>Modelo de datos normalizado simulando una estructura real de retail</li>
+    <li>Uso de joins entre ventas y clientes para análisis multi-nivel</li>
+    <li>Cálculo de ingresos a nivel transaccional</li>
+  </ul>
+
+  <h4>💻 Recursos Técnicos:</h4>
+  <div class="links">
+      <a href="/portfolio/project3_customer/sql/customer_analytics_db.sql" target="_blank">📄 View SQL Script</a>
+      <a href="/portfolio/project3_customer/powerbi/analyticsdb_reports.pbix" download>📊 Descargar Power BI</a>
+  </div>
+  </div>
+</div>
+</section>
+  
+<!-- <section style="text-align:center; max-width:800px; margin:auto; padding:10px;">
+  <p><strong>Tech Stack:</strong></p>
+ <p>SQL Server • Power BI • Data Modeling • Data Analysis</p>
+</section> -->
+
+<section style="text-align:center; padding:40px;">
+  <h3>📩 Abierta a oportunidades en Soporte de Aplicaciones y SQL Server</h3>
+
+  <div style="margin-top:20px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bernachea.cn@gmail.com&su=Job%20Opportunity%20-%20Portfolio"
+     target="_blank"
+     style="background:#22c55e; padding:12px 18px; border-radius:6px; text-decoration:none; color:black; font-weight:bold;">
+     📧 Contactame!
+  </a>
+
+    <a href="https://www.linkedin.com/in/bernacheacarolina/" target="_blank"
+       style="background:#38bdf8; padding:12px 18px; border-radius:6px; text-decoration:none; color:black; font-weight:bold;">
+       💼 LinkedIn
+    </a>
+
+  </div>
+</section>
+  
+<script>
+function toggleProject(id, btnId) {
+  const section = document.getElementById(id);
+  const btn = document.getElementById(btnId);
+
+  section.classList.toggle("open");
+
+  btn.innerText = section.classList.contains("open")
+    ? "Hide Details"
+    : "View Details";
+}
+</script>
+
+<script>
+function showChart(type) {
+  const img = document.getElementById("chart");
+
+  if (type === "cat") {
+    img.src = "/portfolio/project1_retail/images/IngresosCategorias.jpg";
+  }
+  if (type === "prod") {
+    img.src = "/portfolio/project1_retail/images/TopProductos.jpg";
+  }
+  if (type === "time") {
+    img.src = "/portfolio/project1_retail/images/IngresosPorFecha.jpg";
+  }
+}
+</script>
+  
+<script>
+function showChart3(type) {
+  const chart = document.getElementById("chart3");
+
+  if (type === "year") {
+    chart.src = "/portfolio/project3_analytics/images/IngresosporAnio.jpg";
+  } 
+  else if (type === "city") {
+    chart.src = "/portfolio/project3_analytics/images/IngresosporCiudad.jpg";
+  } 
+  else if (type === "map") {
+    chart.src = "/portfolio/project3_analytics/images/mapa.jpg";
+  } 
+  else if (type === "customers") {
+    chart.src = "/portfolio/project3_analytics/images/OrdenesporCliente.jpg";
+  }
+}
+</script>
+  
+<script>
+function toggleProject2() {
+  const section = document.getElementById("details2");
+  const btn = document.getElementById("btn2");
+  
+  section.classList.toggle("open");
+
+  if (section.classList.contains("open")) {
+    btn.innerText = "Hide Details";
+  } else {
+    btn.innerText = "View Details";
+  }
+}
+</script>
+  
+</body>
+</html>
