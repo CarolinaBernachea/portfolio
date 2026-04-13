@@ -421,7 +421,7 @@
       <button onclick="showChart('time')">Tendencias</button>
 
       <div class="chart-container">
-        <img id="chart" src="../project1_retail/images/IngresosCategorias.jpg">
+        <img id="chart" src="../portfolio/project1_retail/images/IngresosCategorias.jpg">
       </div>
 
       <h4>Dashboard Interactivo</h4>
@@ -444,8 +444,8 @@
       <h4>💻 Recursos Técnicos:</h4>
 
       <div class="links">
-        <a href="../project1_retail/sql/retail_db.sql" target="_blank">📄 Ver Script SQL</a>
-        <a href="../project1_retail/powerbi/retaildb_reports.pbix" download>📊 Descargar Power BI</a>
+        <a href="../portfolio/project1_retail/sql/retail_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="../portfolio/project1_retail/powerbi/retaildb_reports.pbix" download>📊 Descargar Power BI</a>
       </div>
 
     </div>
@@ -499,7 +499,7 @@
       
       <h4>Vista Estática del Dashboard:</h4>
       <div class="chart-container">
-        <img src="../project2_delivery/images/mapa.jpg">
+        <img src="../portfolio/project2_delivery/images/mapa.jpg">
       </div>
 
       <h4>Dashboard Interactivo</h4>
@@ -519,8 +519,8 @@
       
       <h4>💻 Recursos Técnicos:</h4>
       <div class="links">
-        <a href="../project2_delivery/sql/delivery_db.sql" target="_blank">📄 Ver Script SQL</a>
-        <a href="../project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Descargar Power BI</a>
+        <a href="../portfolio/project2_delivery/sql/delivery_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="../portfolio/project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Descargar Power BI</a>
       </div>
     </div>
   </div>
@@ -577,7 +577,7 @@
   </div>
 
   <div class="chart-container">
-    <img id="chart3" src="../project3_analytics/images/IngresosporAnio.jpg">
+    <img id="chart3" src="../portfolio/project3_analytics/images/IngresosporAnio.jpg">
   </div>  
 
   <h4>Dashboard Interactivo</h4>
@@ -597,8 +597,8 @@
 
   <h4>💻 Recursos Técnicos:</h4>
   <div class="links">
-      <a href="../project3_customer/sql/customer_analytics_db.sql" target="_blank">📄 Ver Script SQL</a>
-      <a href="../project3_customer/powerbi/analyticsdb_reports.pbix" download>📊 Descargar Power BI</a>
+      <a href="../portfolio/project3_customer/sql/customer_analytics_db.sql" target="_blank">📄 Ver Script SQL</a>
+      <a href="../portfolio/project3_customer/powerbi/analyticsdb_reports.pbix" download>📊 Descargar Power BI</a>
   </div>
   </div>
 </div>
@@ -646,13 +646,13 @@ function showChart(type) {
   const img = document.getElementById("chart");
 
   if (type === "cat") {
-    img.src = "../project1_retail/images/IngresosCategorias.jpg";
+    img.src = "../portfolio/project1_retail/images/IngresosCategorias.jpg";
   }
   if (type === "prod") {
-    img.src = "../project1_retail/images/TopProductos.jpg";
+    img.src = "../portfolio/project1_retail/images/TopProductos.jpg";
   }
   if (type === "time") {
-    img.src = "../project1_retail/images/IngresosPorFecha.jpg";
+    img.src = "../portfolio/project1_retail/images/IngresosPorFecha.jpg";
   }
 }
 </script>
@@ -662,16 +662,16 @@ function showChart3(type) {
   const chart = document.getElementById("chart3");
 
   if (type === "year") {
-    chart.src = "../project3_analytics/images/IngresosporAnio.jpg";
+    chart.src = "../portfolio/project3_analytics/images/IngresosporAnio.jpg";
   } 
   else if (type === "city") {
-    chart.src = "../project3_analytics/images/IngresosporCiudad.jpg";
+    chart.src = "../portfolio/project3_analytics/images/IngresosporCiudad.jpg";
   } 
   else if (type === "map") {
-    chart.src = "../project3_analytics/images/mapa.jpg";
+    chart.src = "../portfolio/project3_analytics/images/mapa.jpg";
   } 
   else if (type === "customers") {
-    chart.src = "../project3_analytics/images/OrdenesporCliente.jpg";
+    chart.src = "../portfolio/project3_analytics/images/OrdenesporCliente.jpg";
   }
 }
 </script>
