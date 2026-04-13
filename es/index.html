@@ -210,9 +210,7 @@
 </head>
 
 <body>
-
 <header>
-
   <div style="position:absolute; top:20px; right:20px;">
     <a href="../index.html" style="padding:5px 10px; border-radius:5px; background:#1e293b; color:#38bdf8; font-weight:bold; font-size:12px;">EN</a>
     <a href="index.html" style="padding:5px 10px; border-radius:5px; background:#38bdf8; color:black; font-weight:bold; font-size:12px;">ES</a>
@@ -230,15 +228,12 @@
      style="background:#facc15; padding:12px 20px; border-radius:8px; text-decoration:none; color:black; font-weight:bold; font-size:14px;">
      📄 Ver CV
   </a>
-
   <a href="https://www.linkedin.com/in/bernacheacarolina/" target="_blank"
      style="background:#38bdf8; padding:12px 20px; border-radius:8px; text-decoration:none; color:black; font-weight:bold; font-size:14px;">
      💼 LinkedIn
   </a>
 
 </div>
-
-  
 </header>
   
 <section style="text-align:center; max-width:800px; margin:10px auto 0 auto; padding:10px;">
@@ -426,7 +421,7 @@
       <button onclick="showChart('time')">Tendencias</button>
 
       <div class="chart-container">
-        <img id="chart" src="/portfolio/project1_retail/images/IngresosCategorias.jpg">
+        <img id="chart" src="../portfolio/project1_retail/images/IngresosCategorias.jpg">
       </div>
 
       <h4>Dashboard Interactivo</h4>
@@ -449,8 +444,8 @@
       <h4>💻 Recursos Técnicos:</h4>
 
       <div class="links">
-        <a href="/portfolio/project1_retail/sql/retail_db.sql" target="_blank">📄 Ver Script SQL</a>
-        <a href="/portfolio/project1_retail/powerbi/retaildb_reports.pbix" download>📊 Descargar Power BI</a>
+        <a href="../portfolio/project1_retail/sql/retail_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="../portfolio/project1_retail/powerbi/retaildb_reports.pbix" download>📊 Descargar Power BI</a>
       </div>
 
     </div>
@@ -504,7 +499,7 @@
       
       <h4>Vista Estática del Dashboard:</h4>
       <div class="chart-container">
-        <img src="/portfolio/project2_delivery/images/mapa.jpg">
+        <img src="../portfolio/project2_delivery/images/mapa.jpg">
       </div>
 
       <h4>Dashboard Interactivo</h4>
@@ -524,8 +519,8 @@
       
       <h4>💻 Recursos Técnicos:</h4>
       <div class="links">
-        <a href="/portfolio/project2_delivery/sql/delivery_db.sql" target="_blank">📄 Ver Script SQL</a>
-        <a href="/portfolio/project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Descargar Power BI</a>
+        <a href="../portfolio/project2_delivery/sql/delivery_db.sql" target="_blank">📄 Ver Script SQL</a>
+        <a href="../portfolio/project2_delivery/powerbi/deliverydb_reports.pbix" download>📊 Descargar Power BI</a>
       </div>
     </div>
   </div>
@@ -582,7 +577,7 @@
   </div>
 
   <div class="chart-container">
-    <img id="chart3" src="/portfolio/project3_analytics/images/IngresosporAnio.jpg">
+    <img id="chart3" src="../portfolio/project3_analytics/images/IngresosporAnio.jpg">
   </div>  
 
   <h4>Dashboard Interactivo</h4>
@@ -602,8 +597,8 @@
 
   <h4>💻 Recursos Técnicos:</h4>
   <div class="links">
-      <a href="/portfolio/project3_customer/sql/customer_analytics_db.sql" target="_blank">📄 View SQL Script</a>
-      <a href="/portfolio/project3_customer/powerbi/analyticsdb_reports.pbix" download>📊 Descargar Power BI</a>
+      <a href="../portfolio/project3_customer/sql/customer_analytics_db.sql" target="_blank">📄 Ver Script SQL</a>
+      <a href="../portfolio/project3_customer/powerbi/analyticsdb_reports.pbix" download>📊 Descargar Power BI</a>
   </div>
   </div>
 </div>
@@ -641,8 +636,8 @@ function toggleProject(id, btnId) {
   section.classList.toggle("open");
 
   btn.innerText = section.classList.contains("open")
-    ? "Hide Details"
-    : "View Details";
+    ? "Ocultar Detalles"
+    : "Ver Detalles";
 }
 </script>
 
@@ -651,13 +646,13 @@ function showChart(type) {
   const img = document.getElementById("chart");
 
   if (type === "cat") {
-    img.src = "/portfolio/project1_retail/images/IngresosCategorias.jpg";
+    img.src = "../portfolio/project1_retail/images/IngresosCategorias.jpg";
   }
   if (type === "prod") {
-    img.src = "/portfolio/project1_retail/images/TopProductos.jpg";
+    img.src = "../portfolio/project1_retail/images/TopProductos.jpg";
   }
   if (type === "time") {
-    img.src = "/portfolio/project1_retail/images/IngresosPorFecha.jpg";
+    img.src = "../portfolio/project1_retail/images/IngresosPorFecha.jpg";
   }
 }
 </script>
@@ -667,16 +662,16 @@ function showChart3(type) {
   const chart = document.getElementById("chart3");
 
   if (type === "year") {
-    chart.src = "/portfolio/project3_analytics/images/IngresosporAnio.jpg";
+    chart.src = "../portfolio/project3_analytics/images/IngresosporAnio.jpg";
   } 
   else if (type === "city") {
-    chart.src = "/portfolio/project3_analytics/images/IngresosporCiudad.jpg";
+    chart.src = "../portfolio/project3_analytics/images/IngresosporCiudad.jpg";
   } 
   else if (type === "map") {
-    chart.src = "/portfolio/project3_analytics/images/mapa.jpg";
+    chart.src = "../portfolio/project3_analytics/images/mapa.jpg";
   } 
   else if (type === "customers") {
-    chart.src = "/portfolio/project3_analytics/images/OrdenesporCliente.jpg";
+    chart.src = "../portfolio/project3_analytics/images/OrdenesporCliente.jpg";
   }
 }
 </script>
@@ -689,9 +684,9 @@ function toggleProject2() {
   section.classList.toggle("open");
 
   if (section.classList.contains("open")) {
-    btn.innerText = "Hide Details";
+    btn.innerText = "Ocultar Detalles";
   } else {
-    btn.innerText = "View Details";
+    btn.innerText = "Ver Detalles";
   }
 }
 </script>
